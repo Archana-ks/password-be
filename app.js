@@ -17,6 +17,9 @@ app.use(cookiParser());
 app.use(cors());
 app.use(router);
 
+app.get('/', (req, res) => {
+    res.send("GET Request Called")
+})
 
 app.listen(port,()=>{
     console.log(`server start at port no : ${port}`);
